@@ -1,6 +1,9 @@
 TweetWithRails::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+
+  root :to => "sessions#new"
+  match '/auth/:provider/callback', :to => 'sessions#callback', :as => :callback
+  match '/tweets', :to => 'views#tweets'
+  delete '/signout', :to => 'sessions#destroy', :as => :signout
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -1,0 +1,30 @@
+- if signed_in?
+  = image_tag(@user.profile_image_url).html_safe
+  %h3
+    Welcome #{link_to(@user.name, @user.url)}
+  %table
+    %tr
+      %th
+        Location
+      %td
+        = @user.location
+    %tr
+      %th
+        Friends
+      %td
+        = @user.friends_count
+    %tr
+      %th
+        Followers
+      %td
+        = @user.followers_count
+    %tr
+      %th
+        My stuff
+      %td
+        = @user.favourites_count
+  = form_tag(signout_path, :method => :delete) do
+    = submit_tag 'Sign out'
+- else
+  = form_tag('/auth/twitter', :method => :get) do
+    = submit_tag 'Sign in'

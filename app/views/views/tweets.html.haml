@@ -1,0 +1,8 @@
+- if signed_in?
+  %ul
+    - @user.each do |key|
+      %li
+        = key.text
+- else
+  = form_tag('/auth/twitter', :method => :get) do
+    = submit_tag 'Sign in'
