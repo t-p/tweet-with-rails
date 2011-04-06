@@ -22,7 +22,7 @@
       %th
         My stuff
       %td
-        = @user.favourites_count
+        = @user
   = form_tag(signout_path, :method => :delete) do
     = submit_tag 'Sign out'
 - else

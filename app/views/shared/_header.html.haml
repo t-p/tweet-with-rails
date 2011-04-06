@@ -1,0 +1,8 @@
+%div{:class => 'span-24 last round', :id => 'header'}
+  %ul
+    %li
+      = link_to('Home', root_path)
+    %li
+      = link_to("#{client.user.screen_name}", "/user_info")
+    %li
+      = link_to('Sign out', '/signout')

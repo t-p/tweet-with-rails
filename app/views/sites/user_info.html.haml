@@ -1,0 +1,14 @@
+- if signed_in?
+  = render '/shared/header'
+  %div{ :id => "content", :class => "span-16 round"}
+    %ul
+      %li
+        %img(src="#{client.user.profile_image_url}")
+      %li
+        = client.user.screen_name
+      %li
+        = client.user
+  = render '/shared/sidebar'
+- else
+  = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 
+
