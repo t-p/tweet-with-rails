@@ -2,6 +2,6 @@
   %ul
     %li local_trends
     %li ToDo: error 403 handling
-/   - client.trends.each do |key|
-/     %li
-/       = key
+    - client.local_trends(23424829).each do |key|
+      %li
+        = key
