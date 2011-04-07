@@ -4,4 +4,9 @@
     %li ToDo: error 403 handling
     - client.local_trends(23424829).each do |key|
       %li
-        = key
+        - if /^\#/ =~ key
+          %a(href="/trend/#{key[1..-1]}")
+            ="#{key}"
+        - else
+          %a(href="/trend/#{key}")
+            ="#{key}"

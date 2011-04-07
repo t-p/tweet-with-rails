@@ -1,0 +1,11 @@
+- if signed_in?
+  = render '/shared/header'
+  %div{:id => "content", :class => "span-16 round"}
+    %ul
+      - @trend.each do |key|
+        %li
+          %img(src="#{key.profile_image_url}") 
+          = key.text
+  = render '/shared/sidebar'
+- else
+  = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 

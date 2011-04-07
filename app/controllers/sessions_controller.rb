@@ -8,6 +8,10 @@ class SessionsController < ApplicationController
     redirect_to root_path, :notice => "Signed in to Twitter!"
   end
 
+  def error
+    redirect_to root_path, :alert => "Sign in with Twitter failed!"
+  end
+
   def destroy
     reset_session
     redirect_to root_path, :notice => "Signed out!"
