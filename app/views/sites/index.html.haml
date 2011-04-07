@@ -5,7 +5,7 @@
       - client.friends_timeline.each do |key|
         %li
           %img(src="#{key.user.profile_image_url}")
-          = key.text
+          = parse_for_url(key.text).html_safe
   = render '/shared/sidebar'
 - else
   = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 

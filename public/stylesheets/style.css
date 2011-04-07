@@ -21,6 +21,7 @@ a.signin_button {
 
 h3 {
   text-align: center;
+  text-decoration: underline;
   padding-top: 8px; 
   color: #333 }
 /*
@@ -70,6 +71,16 @@ h3 {
 #content img {
   padding: 5px 10px 5px 0;
   float:left; }
+
+#content a.external {
+  color: #333;
+  text-decoration: none;
+  background:url(/images/external.png) 99% 40% no-repeat; 
+  padding-right: 15px; }
+
+#content a:hover {
+  color: #333;
+  text-decoration: underline; }
 /*
  * --- Sidebar --- */
 #sidebar {
@@ -86,6 +97,7 @@ h3 {
   color: #454545;
   font-size: 1.4em;
   text-decoration: none; }
+
 #sidebar ul a:hover {
   display: block;
   padding: 10px 0 10px 20px;
