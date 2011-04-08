@@ -7,5 +7,6 @@
           %img(src="#{key.user.profile_image_url}")
           = parse_for_url(key.text).html_safe
   = render '/shared/sidebar'
+  = render '/shared/footer'
 - else
   = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 
