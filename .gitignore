@@ -2,3 +2,5 @@
 db/*.sqlite3
 log/*.log
 tmp/
+config/initializers/omniauth.rb
+config/initializers/simpledb.rb
