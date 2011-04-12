@@ -3,9 +3,12 @@
   %div{ :id => "content", :class => "span-18 round"}
     %ul
       %li
-        %img(src="#{client.user.profile_image_url}")
-      %li
         = client.user.screen_name
+      %li
+        = client.user.name
+      %li
+        Ort: 
+        = client.user.location
       %li
         = client.user
   = render '/shared/sidebar'
