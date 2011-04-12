@@ -1,16 +1,27 @@
 - if signed_in?
   = render '/shared/header'
   %div{ :id => "content", :class => "span-18 round"}
-    %ul
-      %li
-        = client.user.screen_name
-      %li
+    %dl
+      %dt 
+        User Name:
+      %dd
         = client.user.name
-      %li
+      %dt 
+        Screen Name:
+      %dd
+        = client.user.screen_name
+      %dt
         Ort: 
+      %dd
         = client.user.location
-      %li
-        = client.user
+      %dt
+        Friends:
+      %dd
+        = client.user.friends_count
+      %dt
+        Followers:
+      %dd
+        = client.user.followers_count
   = render '/shared/sidebar'
   = render '/shared/footer'
 - else

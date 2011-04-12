@@ -22,7 +22,7 @@ a.signin_button {
 h3 {
   text-align: center;
   text-decoration: underline;
-  padding-top: 8px; 
+  padding-top: 12px; 
   color: #333 }
 /*
  * --- Header --- */
@@ -98,6 +98,18 @@ h3 {
 #content a:hover {
   color: #333;
   text-decoration: underline; }
+
+#content dl {
+  margin: 35px 0 395px 60px;
+  font-size: 1.2em; }
+
+#content dt {
+  font-weight: normal;
+  float: left; }
+
+#content dd {
+  margin-left: 120px; }
+
 /*
  * --- Sidebar --- */
 #sidebar {
