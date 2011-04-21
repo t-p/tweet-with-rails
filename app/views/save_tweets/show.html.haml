@@ -1,0 +1,15 @@
+- if signed_in?
+  = render '/shared/header'
+  %div{ :id => "content", :class => "span-18 round"}
+    = form_for(SaveTweet.new) do |f|
+      = f.text_field :tweet_id
+      = submit_tag
+    %ul
+      - @save_tweet.each do |key|
+        %li
+        = key.attributes["tweet_id"]
+
+  = render '/shared/sidebar'
+  = render '/shared/footer'
+- else
+  = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 

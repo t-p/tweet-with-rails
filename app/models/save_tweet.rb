@@ -1,3 +1,3 @@
 class SaveTweet < SimpleRecord::Base
-  has_ints :tweet_id
+  has_strings :tweet_id, :user_id
 end
