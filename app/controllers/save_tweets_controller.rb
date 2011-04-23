@@ -1,7 +1,7 @@
 class SaveTweetsController < ApplicationController
 
   def index
-    @save_tweets = SaveTweet.find(:all, :select => 'tweet_id').map(&:tweet_id)
+    @save_tweets = SaveTweet.find(:all, :order => 'created DESC', :select => 'tweet_id').map(&:tweet_id)
   end
 
   def show
