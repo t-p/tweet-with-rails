@@ -6,7 +6,7 @@
         %li
           %img(src="#{Twitter.status(tweet).user.profile_image_url}")
           = parse_for_url(Twitter.status(tweet).text).html_safe
-          = link_to 'Destroy', tweet, :confirm => 'Sicher?', :method => :delete
+          = link_to 'Destroy', save_tweet_path(tweet), :confirm => 'Sicher?', :method => :delete
 
   = render '/shared/sidebar'
   = render '/shared/footer'

@@ -19,11 +19,17 @@ a.signin_button {
   font-weight: bold;
   padding: 20px; }
 
+.save_btn {
+  margin: 15px 0 10px 10px; }
+
 h3 {
   text-align: center;
   text-decoration: underline;
   padding-top: 12px; 
   color: #333 }
+
+hr {
+  border-bottom: dotted 1px #454545; }
 /*
  * --- Header --- */
 #header {
@@ -86,8 +92,8 @@ h3 {
   font-size: 1.3em; } 
 
 #content img {
-  padding: 5px 10px 5px 0;
-  float:left; }
+  padding: 5px 10px 5px 5px;
+  float:left;   }
 
 #content a.external {
   color: #333;
@@ -99,16 +105,6 @@ h3 {
   color: #333;
   text-decoration: underline; }
 
-#content dl {
-  margin: 35px 0 395px 60px;
-  font-size: 1.2em; }
-
-#content dt {
-  font-weight: normal;
-  float: left; }
-
-#content dd {
-  margin-left: 120px; }
 /*
  * --- Sidebar --- */
 #sidebar {

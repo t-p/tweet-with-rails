@@ -22,7 +22,7 @@ class SaveTweetsController < ApplicationController
   end
 
   def destroy
-    @save_tweet = SaveTweet.find(params[:id])
+    @save_tweet = SaveTweet.find(:first, :tweet_id => params[:id])
     @save_tweet.destroy
     redirect_to(save_tweets_path)
   end

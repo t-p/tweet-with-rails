@@ -3,7 +3,8 @@
   %div{ :id => "content", :class => "span-18 round"}
     = form_tag(save_tweets_path, :method => :create) do
       %ul
-        = submit_tag
+        = submit_tag("save tweet", :class => "save_btn")
+        %hr
         - client.friends_timeline.each do |key|
           %li
             = check_box_tag("tweet_ids[]", key.id)
