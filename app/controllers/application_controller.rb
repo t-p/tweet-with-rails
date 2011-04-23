@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
 
   after_filter :close_sdb_connection
 
+  def close_sdb_connection
+      SimpleRecord.close_connection
+  end
+
+
   private
 
   def client
@@ -17,10 +22,6 @@ class ApplicationController < ActionController::Base
 
   def signed_in?
     session[:nickname] && session[:access_token] && session[:access_secret]
-  end
-
-  def close_sdb_connection
-      SimpleRecord.close_connection
   end
 
   helper_method :client, :signed_in?

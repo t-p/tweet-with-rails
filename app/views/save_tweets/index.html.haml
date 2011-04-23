@@ -1,14 +1,12 @@
 - if signed_in?
   = render '/shared/header'
   %div{ :id => "content", :class => "span-18 round"}
-    = form_for(SaveTweet.new) do |f|
-      = f.text_field(:tweet_id)
-      = submit_tag
     %ul
-      - @save_tweets.each do |key|
+      - @save_tweets.each do |tweet|
         %li
-        = key.attributes["tweet_id"]
-        = link_to 'Destroy', key, :confirm => 'Sicher?', :method => :delete
+          %img(src="#{Twitter.status(tweet).user.profile_image_url}")
+          = parse_for_url(Twitter.status(tweet).text).html_safe
+          = link_to 'Destroy', tweet, :confirm => 'Sicher?', :method => :delete
 
   = render '/shared/sidebar'
   = render '/shared/footer'
