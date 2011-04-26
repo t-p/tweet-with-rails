@@ -1,7 +1,6 @@
 %div{ :id => "sidebar", :class => "span-6 round last"}
   %h3 Trends in Germany
   %ul
-    %li ToDo: error 403 handling
     - client.local_trends(23424829).each do |key|
       %li
         - if /^\#/ =~ key

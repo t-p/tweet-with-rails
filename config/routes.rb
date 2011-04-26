@@ -1,13 +1,16 @@
 TweetWithRails::Application.routes.draw do
 
+  resources :save_tweets
+
   root  :to => 'sites#index'
   match '/auth/:provider/callback', :to => 'sessions#callback', :as => :callback
   match '/signout', :to => 'sessions#destroy', :as => :signout
   match '/auth/failure', :to => 'sessions#error', :as => :error
   match '/user_info', :to => 'sites#user_info'
   match '/trend/:id', :to => 'sites#trend', :as => :trend
-  match '/tweets', :to => 'views#tweets'
-  match '/test', :to => 'sessions#new'
+# match '/tweets', :to => 'views#tweets'
+# match '/test', :to => 'sessions#new'
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

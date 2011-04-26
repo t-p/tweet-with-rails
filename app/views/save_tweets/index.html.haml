@@ -1,0 +1,14 @@
+- if signed_in?
+  = render '/shared/header'
+  %div{ :id => "content", :class => "span-18 round"}
+    %ul
+      - @save_tweets.each do |tweet|
+        %li
+          %img(src="#{Twitter.status(tweet).user.profile_image_url}")
+          = parse_for_url(Twitter.status(tweet).text).html_safe
+          = link_to 'Destroy', save_tweet_path(tweet), :confirm => 'Sicher?', :method => :delete
+
+  = render '/shared/sidebar'
+  = render '/shared/footer'
+- else
+  = link_to('sign in to twitter', '/auth/twitter', :method => :get, :class => 'signin_button round') 
