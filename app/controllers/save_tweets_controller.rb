@@ -1,13 +1,13 @@
 class SaveTweetsController < ApplicationController
 
   def index
-    @save_tweets = SaveTweet.find(:all, :order => 'created DESC', :select => 'tweet_id').map(&:tweet_id)
+    @save_tweets = SaveTweet.find_all.map(&:tweet_id)
   end
 
-  def show
-    @save_tweet = SaveTweet.find(:all)
-
-  end
+#  def show
+#    @save_tweet = SaveTweet.find(:all)
+#
+#  end
 
 #  def new
 #    @save_tweet = SaveTweet.new
