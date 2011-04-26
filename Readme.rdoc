@@ -1,7 +1,0 @@
-= tweet with rails
----
-still work in progress
-
-http://tweet-with-rails.heroku.com
-
-ToDo: error 403 handling => rack middleware
