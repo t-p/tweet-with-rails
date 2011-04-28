@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-    @user = client.user if signed_in?
-  end
 
   def callback
     sign_in(request.env['omniauth.auth'])

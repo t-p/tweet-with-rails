@@ -1,17 +1,10 @@
 class SaveTweetsController < ApplicationController
 
+  before_filter :fetch_saved_user
+
   def index
     @save_tweets = SaveTweet.find_all.map(&:tweet_id)
   end
-
-#  def show
-#    @save_tweet = SaveTweet.find(:all)
-#
-#  end
-
-#  def new
-#    @save_tweet = SaveTweet.new
-#  end
 
   def create
     params[:tweet_ids].each do |id|

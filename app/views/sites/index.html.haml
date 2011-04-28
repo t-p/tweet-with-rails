@@ -7,6 +7,7 @@
         %hr
         - client.friends_timeline.each do |key|
           %li
+            = @saved_user
             = check_box_tag("tweet_ids[]", key.id)
             %img(src="#{key.user.profile_image_url}")
             = parse_for_url(key.text).html_safe

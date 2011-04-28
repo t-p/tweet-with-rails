@@ -5,23 +5,23 @@
       %dt 
         User Name:
       %dd
-        = client.user.name
+        = @user.name
       %dt 
         Screen Name:
       %dd
-        = client.user.screen_name
+        = @user.screen_name
       %dt
         Ort: 
       %dd
-        = client.user.location
+        = @user.location
       %dt
         Friends:
       %dd
-        = client.user.friends_count
+        = @user.friends_count
       %dt
         Followers:
       %dd
-        = client.user.followers_count
+        = @user.followers_count
   = render '/shared/sidebar'
   = render '/shared/footer'
 - else
